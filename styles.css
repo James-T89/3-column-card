@@ -1,0 +1,121 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+--Bright-Orange: hsl(31, 77%, 52%);
+--Dark-Cyan: hsl(184, 100%, 22%);
+--Very-Dark-Cyan: hsl(179, 100%, 13%);
+--Paragraphs: hsla(0, 0%, 100%, 0.75);
+--Background-Headings-Buttons: hsl(0, 0%, 95%);
+}
+
+body {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.938rem;
+  background: var(--Background-Headings-Buttons);
+}
+
+main {
+  margin: 0 1.5rem;
+}
+
+.sedan-card,
+.suv-card,
+.luxury-card {
+  padding: 2.5rem;
+  min-width: 15.75rem;
+  max-width: 20.438rem;
+  margin: 0 auto;
+}
+
+.sedan-card {
+  border-radius: .5rem .5rem 0 0;
+  margin-block-start: 1.5rem;
+  background: var(--Bright-Orange);
+}
+
+.suv-card {
+  background: var(--Dark-Cyan);
+}
+
+.luxury-card {
+  border-radius: 0 0 .5rem .5rem;
+  margin-block-end: 1.5rem;
+  background: var(--Very-Dark-Cyan);
+}
+
+h1 {
+  margin: 1.5rem 0;
+  font-size: 2.4rem;
+  color: var(--Background-Headings-Buttons);
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+}
+
+p {
+  margin-block-end: 2rem;
+  line-height: 1.5;
+  font-size: 0.969rem;
+  color: var(--Paragraphs);
+  padding-inline-end: .25rem;
+}
+
+button {
+  background: var(--Background-Headings-Buttons);
+  font-family: 'Lexend Deca', sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 0.938rem;
+  padding: .75rem 1.7rem;
+  border-radius: 1.3rem;
+  border: 2px solid transparent;
+}
+
+button:hover {
+  background: none;
+  color: var(--Background-Headings-Buttons);
+  border: 2px solid var(--Background-Headings-Buttons);
+}
+
+.sedan-btn {
+  color: var(--Bright-Orange);
+}
+
+.suv-btn {
+  color: var(--Dark-Cyan);
+}
+
+.luxury-btn {
+  color: var(--Very-Dark-Cyan);
+}
+
+@media (min-width: 950px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    max-width: 60rem;
+  }
+
+  .sedan-card {
+    border-radius: .5rem 0 0 .5rem;
+    margin: 0;
+  }
+
+  .luxury-card {
+    border-radius: 0 .5rem .5rem 0;
+    margin: 0;
+  }
+
+  p {
+    margin-block-end: 5rem;
+    padding-inline-end: 1.5rem;
+  }
+}

@@ -82,6 +82,7 @@ button:hover {
   background: none;
   color: var(--Background-Headings-Buttons);
   border: 2px solid var(--Background-Headings-Buttons);
+  transition: 200ms;
 }
 
 .sedan-btn {
